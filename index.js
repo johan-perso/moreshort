@@ -1,5 +1,3 @@
-// TODO: tester sur le site d'Unshort
-
 // Imports services
 const xgd = require("./services/xgd")
 const libaro = require("./services/libaro")
