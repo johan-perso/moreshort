@@ -280,7 +280,7 @@ var exports = {
 		{
 			name: "Libaro",
 			website: "https://liba.ro",
-			corsFriendly: false
+			corsFriendly: true
 		},
 		{
 			name: "Bitly.ws",
