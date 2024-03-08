@@ -172,6 +172,60 @@ var servicesInfos = {
 		corsFriendly: true,
 		instantRedirect: true,
 		providerFile: "unshort"
+	},
+	"s.miapi.cl": {
+		name: "s.miapi.cl",
+		website: "https://s.miapi.cl",
+		id: "s-miapi-cl",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
+	},
+	"s.erc.hr": {
+		name: "s.erc.hr",
+		website: "https://s.erc.hr",
+		id: "s-erc-hr",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
+	},
+	"s.jib.ar": {
+		name: "s.jib.ar",
+		website: "https://s.jib.ar",
+		id: "s-jib-ar",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
+	},
+	"s.coute.au": {
+		name: "s.coute.au",
+		website: "https://s.coute.au",
+		id: "s-coute-au",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
+	},
+	"mdrr.fr": {
+		name: "mdrr.fr",
+		website: "https://mdrr.fr",
+		id: "mdrr-fr",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
+	},
+	"ptdrr.fr": {
+		name: "ptdrr.fr",
+		website: "https://ptdrr.fr",
+		id: "ptdrr-fr",
+		shortcodes: true,
+		corsFriendly: true,
+		instantRedirect: true,
+		providerFile: "unshort"
 	}
 }
 
@@ -211,7 +265,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.jk.al", "s.amq.ro", "s.orns.net", "s.noble.sx", "s.18168.gq"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.jk.al", "s.amq.ro", "s.orns.net", "s.noble.sx", "s.18168.gq", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.fr"],
 
 	// List of services caracteristics
 	servicesInfos,
@@ -220,23 +274,33 @@ var exports = {
 	servicesCredits: [
 		{
 			name: "is.gd",
-			website: "https://is.gd"
+			website: "https://is.gd",
+			corsFriendly: true
 		},
 		{
 			name: "Libaro",
-			website: "https://liba.ro"
+			website: "https://liba.ro",
+			corsFriendly: false
 		},
 		{
 			name: "Bitly.ws",
-			website: "https://bitly.ws"
+			website: "https://bitly.ws",
+			corsFriendly: false
 		},
 		{
 			name: "Quecto",
-			website: "https://s.oriondev.fr"
+			website: "https://s.oriondev.fr",
+			corsFriendly: false
 		},
 		{
 			name: "FreeDNS",
-			website: "https://freedns.afraid.org"
+			website: "https://freedns.afraid.org",
+			corsFriendly: true
+		},
+		{
+			name: "Unshort",
+			website: "https://unshort.johanstick.fr",
+			corsFriendly: true
 		}
 	],
 
