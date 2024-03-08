@@ -218,10 +218,10 @@ var servicesInfos = {
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"ptdrr.fr": {
-		name: "ptdrr.fr",
-		website: "https://ptdrr.fr",
-		id: "ptdrr-fr",
+	"ptdrr.com": {
+		name: "ptdrr.com",
+		website: "https://ptdrr.com",
+		id: "ptdrr-com",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
@@ -265,7 +265,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.jk.al", "s.amq.ro", "s.orns.net", "s.noble.sx", "s.18168.gq", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.fr"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.jk.al", "s.amq.ro", "s.orns.net", "s.noble.sx", "s.18168.gq", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
 
 	// List of services caracteristics
 	servicesInfos,
