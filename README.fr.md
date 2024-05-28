@@ -14,12 +14,10 @@ Une librairie capable de raccourcir des liens via une simple fonction, en utilis
 | [s.oriondev.fr](https://github.com/oriionn/quecto)   | [s.3vm.cl](https://unshort.johanstick.fr)      |
 | [s.ahpc.fi](https://unshort.johanstick.fr)           | [s.acme.si](https://unshort.johanstick.fr)     |
 | [s.3play.cl](https://unshort.johanstick.fr)          | [s.fronturi.ro](https://unshort.johanstick.fr) |
-| [shor.vercel.app](https://unshort.johanstick.fr)     | [s.jk.al](https://unshort.johanstick.fr)       |
-| [s.amq.ro](https://unshort.johanstick.fr)            | [s.orns.net](https://unshort.johanstick.fr)    |
-| [s.noble.sx](https://unshort.johanstick.fr)          | [s.18168.gq](https://unshort.johanstick.fr)    |
+| [shor.vercel.app](https://unshort.johanstick.fr)     | [ptdrr.com](https://unshort.johanstick.fr)     |
 | [s.miapi.cl](https://unshort.johanstick.fr)          | [s.erc.hr](https://unshort.johanstick.fr)      |
 | [s.jib.ar](https://unshort.johanstick.fr)            | [s.coute.au](https://unshort.johanstick.fr)    |
-| [mdrr.fr](https://unshort.johanstick.fr)             | [ptdrr.com](https://unshort.johanstick.fr)     |
+| [mdrr.fr](https://unshort.johanstick.fr)             |  |
 
 
 ## Installation
