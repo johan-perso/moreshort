@@ -33,7 +33,7 @@ var servicesInfos = {
 		name: "liba.ro",
 		website: "https://liba.ro",
 		id: "liba-ro",
-		shortcodes: true,
+		shortcodes: false,
 		corsFriendly: true,
 		instantRedirect: true,
 		providerFile: "libaro"
@@ -123,51 +123,6 @@ var servicesInfos = {
 		name: "shor.vercel.app",
 		website: "https://shor.vercel.app",
 		id: "shor-vercel-app",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
-	"s.jk.al": {
-		name: "s.jk.al",
-		website: "https://s.jk.al",
-		id: "s-jk-al",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
-	"s.amq.ro": {
-		name: "s.amq.ro",
-		website: "https://s.amq.ro",
-		id: "s-amq-ro",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
-	"s.orns.net": {
-		name: "s.orns.net",
-		website: "https://s.orns.net",
-		id: "s-orns-net",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
-	"s.noble.sx": {
-		name: "s.noble.sx",
-		website: "https://s.noble.sx",
-		id: "s-noble-sx",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
-	"s.18168.gq": {
-		name: "s.18168.gq",
-		website: "https://s.18168.gq",
-		id: "s-18168-gq",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
@@ -265,7 +220,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.jk.al", "s.amq.ro", "s.orns.net", "s.noble.sx", "s.18168.gq", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
 
 	// List of services caracteristics
 	servicesInfos,
