@@ -101,10 +101,10 @@ var servicesInfos = {
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"s.3play.cl": {
-		name: "s.3play.cl",
-		website: "https://s.3play.cl",
-		id: "s-3play-cl",
+	"s.585.eu": {
+		name: "s.585.eu",
+		website: "https://s.585.eu",
+		id: "s-585-eu",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
@@ -220,7 +220,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.3play.cl", "s.fronturi.ro", "shor.vercel.app", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
 
 	// List of services caracteristics
 	servicesInfos,

@@ -13,7 +13,7 @@ Une librairie capable de raccourcir des liens via une simple fonction, en utilis
 | [xy2.eu](https://xy2.eu)                             | [tinyurl.mobi](https://tinyurl.mobi)           |
 | [s.oriondev.fr](https://github.com/oriionn/quecto)   | [s.3vm.cl](https://unshort.johanstick.fr)      |
 | [s.ahpc.fi](https://unshort.johanstick.fr)           | [s.acme.si](https://unshort.johanstick.fr)     |
-| [s.3play.cl](https://unshort.johanstick.fr)          | [s.fronturi.ro](https://unshort.johanstick.fr) |
+| [s.585.eu](https://unshort.johanstick.fr)            | [s.fronturi.ro](https://unshort.johanstick.fr) |
 | [shor.vercel.app](https://unshort.johanstick.fr)     | [ptdrr.com](https://unshort.johanstick.fr)     |
 | [s.miapi.cl](https://unshort.johanstick.fr)          | [s.erc.hr](https://unshort.johanstick.fr)      |
 | [s.jib.ar](https://unshort.johanstick.fr)            | [s.coute.au](https://unshort.johanstick.fr)    |
