@@ -1,7 +1,6 @@
 // Imports services
 const xgd = require("./services/xgd")
 const libaro = require("./services/libaro")
-const bitlyws = require("./services/bitlyws")
 const quecto = require("./services/quecto")
 const unshort = require("./services/unshort")
 
@@ -37,33 +36,6 @@ var servicesInfos = {
 		corsFriendly: true,
 		instantRedirect: true,
 		providerFile: "libaro"
-	},
-	"bitly.ws": {
-		name: "bitly.ws",
-		website: "https://bitly.ws",
-		id: "bitly-ws",
-		shortcodes: false,
-		corsFriendly: false,
-		instantRedirect: true,
-		providerFile: "bitlyws"
-	},
-	"xy2.eu": {
-		name: "xy2.eu",
-		website: "https://xy2.eu",
-		id: "xy2-eu",
-		shortcodes: false,
-		corsFriendly: false,
-		instantRedirect: true,
-		providerFile: "bitlyws"
-	},
-	"tinyurl.mobi": {
-		name: "tinyurl.mobi",
-		website: "https://tinyurl.mobi",
-		id: "tinyurl-mobi",
-		shortcodes: false,
-		corsFriendly: false,
-		instantRedirect: true,
-		providerFile: "bitlyws"
 	},
 	"s.oriondev.fr": {
 		name: "s.oriondev.fr",
@@ -208,7 +180,6 @@ async function short(url, provider, shortcode){
 	// Shorten the URL
 	if(provider.providerFile == "xgd") return xgd(provider.name, url, shortcode)
 	else if(provider.providerFile == "libaro") return libaro(url)
-	else if(provider.providerFile == "bitlyws") return bitlyws(provider.name, url)
 	else if(provider.providerFile == "quecto") return quecto(provider.name, url, shortcode)
 	else if(provider.providerFile == "unshort") return unshort(provider.name, url, shortcode)
 	else return new Error("[lib] Unknown provider file")
@@ -220,7 +191,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
 
 	// List of services caracteristics
 	servicesInfos,
@@ -236,11 +207,6 @@ var exports = {
 			name: "Libaro",
 			website: "https://liba.ro",
 			corsFriendly: true
-		},
-		{
-			name: "Bitly.ws",
-			website: "https://bitly.ws",
-			corsFriendly: false
 		},
 		{
 			name: "Quecto",
