@@ -128,10 +128,10 @@ var servicesInfos = {
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"s.miapi.cl": {
-		name: "s.miapi.cl",
-		website: "https://s.miapi.cl",
-		id: "s-miapi-cl",
+	"s.cije.us": {
+		name: "s.cije.us",
+		website: "https://s.cije.us",
+		id: "s-cije-us",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
@@ -220,7 +220,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.miapi.cl", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "bitly.ws", "xy2.eu", "tinyurl.mobi", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
 
 	// List of services caracteristics
 	servicesInfos,
