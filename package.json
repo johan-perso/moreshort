@@ -6,13 +6,14 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js",
-		"browser-build": "webpack"
+		"browser-build": "webpack",
+		"prepare": "npm run browser-build"
 	},
 	"author": "JohanStickman",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/johan-perso/moreshort"
-    },
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/johan-perso/moreshort.git"
+	},
 	"license": "MIT",
 	"dependencies": {
 		"node-fetch": "2.6.9"
