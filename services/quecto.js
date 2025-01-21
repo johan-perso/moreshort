@@ -8,14 +8,16 @@ module.exports = async function (provider, link, shortCode) {
 
 	const response = await fetch(`https://${provider}/api/shorten`, {
 		method: "POST",
-		body: new URLSearchParams({ link, custom_code: shortCode || "" })
+		body: JSON.stringify({ link, custom_sc: shortCode || "", expiration: 0 })
 	}).then(res => res.text()).catch(err => { return { fetcherror: err } })
 
 	if(typeof response === "string") try { toReturn = JSON.parse(response) } catch (error) { toReturn = response }
 
-	if(!toReturn?.data?.shorten){
+	if(!toReturn?.data?.short_code){
 		var errorMessage = toReturn?.message || toReturn?.fetcherror || toReturn
 		if(typeof errorMessage == "string" && errorMessage?.startsWith("Error: ")) errorMessage = errorMessage.slice(7)
-		return new Error(errorMessage)
-	} else return toReturn.data.shorten
+
+		if(errorMessage.includes("Short code already used")) return module.exports(provider, link)
+		else return new Error(errorMessage)
+	} else return `https://${provider}/${toReturn.data.short_code}`
 }
