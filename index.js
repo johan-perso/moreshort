@@ -136,19 +136,19 @@ var servicesInfos = {
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"mdrr.fr": {
-		name: "mdrr.fr",
-		website: "https://mdrr.fr",
-		id: "mdrr-fr",
+	"rfrr.fr": {
+		name: "rfrr.fr",
+		website: "https://rfrr.fr",
+		id: "rfrr-fr",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"ptdrr.com": {
-		name: "ptdrr.com",
-		website: "https://ptdrr.com",
-		id: "ptdrr-com",
+	"llui.site": {
+		name: "llui.site",
+		website: "https://llui.site",
+		id: "llui-site",
 		shortcodes: true,
 		corsFriendly: true,
 		instantRedirect: true,
@@ -191,7 +191,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "mdrr.fr", "ptdrr.com"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "rfrr.fr", "llui.site"],
 
 	// List of services caracteristics
 	servicesInfos,
