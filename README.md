@@ -7,7 +7,7 @@ A library capable of shortening links through a simple function, using multiple 
 
 ## Supported domains/services
 
-| [mdrr.fr](https://unshort.johanstick.fr)             | [ptdrr.com](https://unshort.johanstick.fr)      |
+| [rfrr.fr](https://unshort.johanstick.fr)             | [llui.site](https://unshort.johanstick.fr)      |
 |------------------------------------------------------|-------------------------------------------------|
 | [is.gd](https://is.gd)                               | [v.gd](https://v.gd)                            |
 | [s.oriondev.fr](https://quecto.oriondev.fr)          | [liba.ro](https://liba.ro)                      |
@@ -59,9 +59,11 @@ The main function has 3 arguments:
 * `url` : The URL to shorten *(string)*
 * `provider` : Domain name of the service to use *(string)*
 * > You can get the list of available services with `moreshort.servicesDomains`
-* `shortcode` : Short code to use *(string)*
-* > Will be present in the shortened URL, after the slash *(e.g. https://is.gd/shortcode)*
-* > Only some services support this feature; `moreshort.servicesInfos` has a boolean property `shortcode` for each service
+* `options` :
+	* `shortcode` : Short code to use *(string)*
+	* > Will be present in the shortened URL, after the slash *(e.g. https://is.gd/shortcode)*
+	* > Only some services support this feature; `moreshort.servicesInfos` has a boolean property `shortcode` for each service
+	* `replaceWhenErrors` : Automatically replace the service used by another if an error occurs *(boolean)*
 
 **Example :**
 
@@ -70,7 +72,7 @@ const moreshort = require('moreshort')
 
 console.log(await moreshort.short('https://google.com')) // Shortened with a random service
 console.log(await moreshort.short('https://google.com', 'is.gd')) // Shortened with the is.gd service
-console.log(await moreshort.short('https://google.com', 'is.gd', 'google')) // Shortened with the is.gd service and the short code "google"
+console.log(await moreshort.short('https://google.com', 'is.gd', { shortcode: 'google' })) // Shortened with the is.gd service and the short code "google"
 ```
 
 

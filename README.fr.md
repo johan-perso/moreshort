@@ -7,7 +7,7 @@ Une librairie capable de raccourcir des liens via une simple fonction, en utilis
 
 ## Domaines/services supportés
 
-| [mdrr.fr](https://unshort.johanstick.fr)             | [ptdrr.com](https://unshort.johanstick.fr)      |
+| [rfrr.fr](https://unshort.johanstick.fr)             | [llui.site](https://unshort.johanstick.fr)      |
 |------------------------------------------------------|-------------------------------------------------|
 | [is.gd](https://is.gd)                               | [v.gd](https://v.gd)                            |
 | [s.oriondev.fr](https://quecto.oriondev.fr)          | [liba.ro](https://liba.ro)                      |
@@ -60,9 +60,11 @@ La fonction principale dispose de 3 arguments :
 * `url` : L'URL à raccourcir *(string)*
 * `provider` : Nom de domaine du service à utiliser *(string)*
 * > Vous pouvez obtenir la liste des services disponibles avec `moreshort.servicesDomains`
-* `shortcode` : Code court à utiliser *(string)*
-* > Sera présent dans l'URL raccourci, après le slash *(ex: https://is.gd/shortcode)*
-* > Seuls certains services supportent cette fonctionnalité, `moreshort.servicesInfos` dispose d'une propriété booléenne `shortcode` pour chaque service
+* `options` :
+	* `shortcode` : Code court à utiliser *(string)*
+	* > Sera présent dans l'URL raccourci, après le slash *(ex: https://is.gd/shortcode)*
+	* > Seuls certains services supportent cette fonctionnalité, `moreshort.servicesInfos` dispose d'une propriété booléenne `shortcode` pour chaque service
+	* `replaceWhenErrors` : Remplace automatiquement le service utilisé par un autre en cas d'erreur *(bool)*
 
 **Exemple :**
 
@@ -71,7 +73,7 @@ const moreshort = require('moreshort')
 
 console.log(await moreshort.short('https://google.com')) // Raccourci avec un service aléatoire
 console.log(await moreshort.short('https://google.com', 'is.gd')) // Raccourci avec le service is.gd
-console.log(await moreshort.short('https://google.com', 'is.gd', 'google')) // Raccourci avec le service is.gd et le code court "google"
+console.log(await moreshort.short('https://google.com', 'is.gd', { shortcode: 'google' })) // Raccourci avec le service is.gd et le code court "google"
 ```
 
 
