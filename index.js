@@ -161,11 +161,13 @@ var servicesInfos = {
  * Shorten an URL
  * @param {string} url - URL to shorten
  * @param {string} provider - Provider domain to use
- * @param {string} shortcode - Code used for pathname
+ * @param {object} options - Options
+ * @param {string} options.shortcode - Code used for pathname
+ * @param {boolean} options.replaceWhenErrors - Automatically replace the provider with another one if the current one fails
  * @returns {string} Shortened URL
  * @throws {string} Error message
 */
-async function short(url, provider, shortcode){
+async function short(url, provider, options = { shortcode: undefined, replaceWhenErrors: true, _replaceWhenErrors_i: 0 }){
 	// If no url specified, throw an error
 	if(!url || url.length < 2) return new Error("[lib] No URL specified")
 	if(!url.startsWith("http://") && !url.startsWith("https://")) url = `https://${url}`
@@ -175,14 +177,29 @@ async function short(url, provider, shortcode){
 	else provider = servicesInfos[provider]
 
 	// If still no provider found, throw an error
-	if(!provider) return new Error("[lib] No provider found")
+	var response
+	if(!provider) response = new Error("[lib] No provider found")
+	if(!options.replaceWhenErrors && response instanceof Error) return response
 
 	// Shorten the URL
-	if(provider.providerFile == "xgd") return xgd(provider.name, url, shortcode)
-	else if(provider.providerFile == "libaro") return libaro(url)
-	else if(provider.providerFile == "quecto") return quecto(provider.name, url, shortcode)
-	else if(provider.providerFile == "unshort") return unshort(provider.name, url, shortcode)
-	else return new Error("[lib] Unknown provider file")
+	if(provider?.providerFile == "xgd") response = xgd(provider.name, url, options.shortcode)
+	else if(provider?.providerFile == "libaro") response = libaro(url)
+	else if(provider?.providerFile == "quecto") response = quecto(provider.name, url, options.shortcode)
+	else if(provider?.providerFile == "unshort") response = unshort(provider.name, url, options.shortcode)
+	else response = new Error("[lib] Cannot find provider file")
+
+	if(options.replaceWhenErrors && response instanceof Error){
+		var newProvider = exports.domainsReplacements[options?._replaceWhenErrors_i || 0]
+		if(environment == "browser") console.info(`[lib] ${response.message}, trying with ${newProvider}`)
+		if(!newProvider) return new Error("[lib] Automatic replacement failed, no more providers available")
+
+		options._replaceWhenErrors_i = options?._replaceWhenErrors_i || 0
+		options._replaceWhenErrors_i++
+
+		return short(url, newProvider, options)
+	}
+
+	else return response
 }
 
 // Exports
@@ -192,6 +209,9 @@ var exports = {
 
 	// List of services domains
 	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "rfrr.fr", "llui.site"],
+
+	// List of domains replacements by priority order
+	domainsReplacements: ["rfrr.fr", "llui.site", "s.3vm.cl", "s.erc.hr", "shor.vercel.app", "is.gd"].filter(service => environment == "browser" ? service.corsFriendly : true),
 
 	// List of services caracteristics
 	servicesInfos,
