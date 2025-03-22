@@ -100,15 +100,6 @@ var servicesInfos = {
 		instantRedirect: true,
 		providerFile: "unshort"
 	},
-	"s.cije.us": {
-		name: "s.cije.us",
-		website: "https://s.cije.us",
-		id: "s-cije-us",
-		shortcodes: true,
-		corsFriendly: true,
-		instantRedirect: true,
-		providerFile: "unshort"
-	},
 	"s.erc.hr": {
 		name: "s.erc.hr",
 		website: "https://s.erc.hr",
@@ -208,7 +199,7 @@ var exports = {
 	version: require("./package.json").version,
 
 	// List of services domains
-	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.cije.us", "s.erc.hr", "s.jib.ar", "s.coute.au", "rfrr.fr", "llui.site"],
+	servicesDomains: ["is.gd", "v.gd", "liba.ro", "s.oriondev.fr", "s.3vm.cl", "s.ahpc.fi", "s.acme.si", "s.585.eu", "s.fronturi.ro", "shor.vercel.app", "s.erc.hr", "s.jib.ar", "s.coute.au", "rfrr.fr", "llui.site"],
 
 	// List of domains replacements by priority order
 	domainsReplacements: ["rfrr.fr", "llui.site", "s.3vm.cl", "s.erc.hr", "shor.vercel.app", "is.gd"].filter(service => environment == "browser" ? service.corsFriendly : true),
